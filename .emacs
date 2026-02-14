@@ -65,8 +65,5 @@
 
 (require 'autothemer)
 
-(use-package github-light
-  :ensure t
-  :config
-  (load-theme 'github-light t)
-  )
+(add-to-list 'custom-theme-load-path "/home/bruno/.emacs.d/themes/")
+(load-theme 'github-light t)
