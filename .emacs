@@ -65,5 +65,16 @@
 
 (require 'autothemer)
 
-(add-to-list 'custom-theme-load-path "/home/bruno/.emacs.d/themes/")
+(add-to-list 'custom-theme-load-path "/home/bruno/.emacs.d/themes")
 (load-theme 'github-light t)
+
+(require 'lsp-mode)
+(use-package hydra
+  :ensure t
+  )
+(use-package gdscript-mode
+  :ensure t
+  :hook (gdscript-mode . lsp-deferred)
+  :after (hydra)
+  )
+;; https://contributing.godotengine.org/en/latest/documentation/manual/building_the_manual.html
