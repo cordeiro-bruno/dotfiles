@@ -63,8 +63,8 @@
 (global-set-key (kbd "C-c a") #'org-agenda)
 (global-set-key (kbd "C-c c") #'org-capture)
 
+;; https://github.com/ladroid/github-emacs-theme
 (require 'autothemer)
-
 (add-to-list 'custom-theme-load-path "/home/bruno/.emacs.d/themes")
 (load-theme 'github-light t)
 
